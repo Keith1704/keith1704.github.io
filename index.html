@@ -38,7 +38,7 @@
       </div>
       <iframe
         id="content"
-        src="/geocities?url=https%3A%2F%2Fmathias-biilmann.geocities.com"
+        src="/geocities?url=https%3A%2F%2Fmonicas-shift-calculator.netlify.app/m"
       ></iframe>
     </div>
 
@@ -47,12 +47,6 @@
       const content = document.getElementById("content");
       const url = new URL(window.location.href).searchParams.get("url");
 
-      addressInput.value = url
-        ? decodeURIComponent(url)
-        : "https://mathias-biilmann.geocities.com";
-      if (url) {
-        content.src = `/geocities?url=${url}`;
-      }
 
       addressInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
